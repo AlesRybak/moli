@@ -6,7 +6,7 @@
 	<parent>
 	    <groupId>cz.alry.moli</groupId>
 	    <artifactId>moli-parent</artifactId>
-	    <version>1.0-SNAPSHOT</version>
+	    <version>1.0</version>
 	</parent>
 	
 	<artifactId>moli-portlet</artifactId>
