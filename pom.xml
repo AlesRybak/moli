@@ -7,14 +7,14 @@
 	<artifactId>moli-parent</artifactId>
 	<packaging>pom</packaging>
 	<name>MoLi</name>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 	
 	<modules>
 	   <module>moli-portlet</module>
 	</modules>
 	
     <scm>
-        <connection>scm:svn:svn+ssh://athena/home/aldar/misc/svn/moli/tags/moli-1.0</connection>
+        <connection>scm:svn:svn+ssh://athena/home/aldar/misc/svn/moli/trunk</connection>
     </scm>
     
     <developers>
