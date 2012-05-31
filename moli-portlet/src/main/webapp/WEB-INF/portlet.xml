@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<portlet-app
+	version="2.0"
+	xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+>
+	<portlet>
+		<portlet-name>SubpagesDisplayPortlet</portlet-name>
+		<display-name>Subpages Display</display-name>
+		<portlet-class>cz.alry.moli.subpages.portlet.SubpagesDisplayPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Subpages Display</title>
+			<short-title>Subpages Display</short-title>
+			<keywords>subpages, display, Liferay</keywords>
+		</portlet-info>
+	</portlet>
+</portlet-app>

@@ -1,0 +1,42 @@
+/* Graphical subpages CSS */
+
+div.moli-subpages-graphic-links { 
+    text-align: center;
+}
+
+div.moli-subpages-graphic-links a { 
+    text-decoration: none;
+}
+
+div.moli-subpages-graphic-links span.envelope { 
+    display: inline-block;
+    text-align: center;
+    width: 220px;
+}
+
+div.moli-subpages-graphic-links span.content-box { 
+	width: 200px;
+	height: 160px;
+    display: block;
+    margin: 10px;
+}
+
+div.moli-subpages-graphic-links span.no-image { 
+    border: gray solid 1px;
+    width: 128px;
+    height: 128px;
+    display: inline-block;
+    margin-top: 24px;
+    vertical-align: middle;
+}
+
+div.moli-subpages-graphic-links img { 
+    width: 128px;
+    height: 128px;
+    margin-top: 24px;
+}
+
+div.moli-subpages-graphic-links h3 { 
+    margin-top: 0px;
+    padding-top: 0px;
+}
