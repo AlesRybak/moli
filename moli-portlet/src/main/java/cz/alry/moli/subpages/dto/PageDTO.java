@@ -2,7 +2,7 @@ package cz.alry.moli.subpages.dto;
 
 /**
  *
- * @author Ales Rybak <ales.rybak@ibacz.eu>
+ * @author Ales Rybak <ales.rybak@gmail.com>
  */
 public class PageDTO {
 

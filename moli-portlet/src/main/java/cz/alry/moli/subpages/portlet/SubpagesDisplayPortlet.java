@@ -2,18 +2,19 @@ package cz.alry.moli.subpages.portlet;
 
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
-import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.model.Layout;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portal.util.PortalUtil;
+import static cz.alry.moli.common.helper.LiferayHelper.*;
 import cz.alry.moli.subpages.dto.PageDTO;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.portlet.*;
 
+
 /**
- * @author Ales Rybak <ales.rybak@ibacz.eu>
+ * @author Ales Rybak <ales.rybak@gmail.com>
  */
 public class SubpagesDisplayPortlet extends GenericPortlet {
 
@@ -30,7 +31,7 @@ public class SubpagesDisplayPortlet extends GenericPortlet {
     private void prepareSubpages(RenderRequest request) throws PortletException {
         try {
         
-            ThemeDisplay td = (ThemeDisplay)request.getAttribute(WebKeys.THEME_DISPLAY);
+            ThemeDisplay td = getThemeDisplay(request);
             Layout currentPage = td.getLayout();
             List<Layout> layouts = currentPage.getChildren();
             
@@ -53,16 +54,6 @@ public class SubpagesDisplayPortlet extends GenericPortlet {
         } catch (SystemException ex) {
             throw new PortletException(ex);
         }
-    }
-
-    private String getLayoutIconUrl(ThemeDisplay td, Layout layout) {
-        String iconUrl = null;
-        
-        if ((layout != null) && layout.isIconImage()) {
-            iconUrl = td.getPathImage() + "/layout_icon?img_id=" + layout.getIconImageId();
-        }
-        
-        return iconUrl;
     }
 
 }

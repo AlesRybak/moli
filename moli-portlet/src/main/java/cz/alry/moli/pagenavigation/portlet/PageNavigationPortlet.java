@@ -2,22 +2,19 @@ package cz.alry.moli.pagenavigation.portlet;
 
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
-import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.model.Layout;
 import com.liferay.portal.service.LayoutLocalServiceUtil;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portal.util.PortalUtil;
+import static cz.alry.moli.common.helper.LiferayHelper.*;
 import cz.alry.moli.subpages.dto.PageDTO;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.portlet.*;
 
 /**
- * @author Ales Rybak <ales.rybak@ibacz.eu>
+ * @author Ales Rybak <ales.rybak@gmail.com>
  */
 public class PageNavigationPortlet extends GenericPortlet {
 
@@ -121,21 +118,6 @@ public class PageNavigationPortlet extends GenericPortlet {
         } catch (SystemException ex) {
             throw new RuntimeException(ex);
         }
-    }
-
-    private ThemeDisplay getThemeDisplay(PortletRequest request) {
-        return (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
-    }
-
-    private String getLayoutIconUrl(PortletRequest request, Layout layout) {
-        ThemeDisplay td = getThemeDisplay(request);
-        String iconUrl = null;
-
-        if ((layout != null) && layout.isIconImage()) {
-            iconUrl = td.getPathImage() + "/layout_icon?img_id=" + layout.getIconImageId();
-        }
-
-        return iconUrl;
     }
 
     private String getLayoutUrl(PortletRequest request, Layout layout) {
